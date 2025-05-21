@@ -153,6 +153,12 @@ export default function Header() {
           {/* Get Started Button - Hidden on mobile */}
           <div className="hidden md:flex justify-end items-center">
             <motion.button
+              onClick={() => {
+                const nextSection = document.querySelector(
+                  "section:nth-of-type(2)"
+                );
+                nextSection?.scrollIntoView({ behavior: "smooth" });
+              }}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1 }}

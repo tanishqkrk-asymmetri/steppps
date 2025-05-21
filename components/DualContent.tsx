@@ -128,7 +128,7 @@ export default function ExpandingCards() {
                     transition={{
                       delay: 0.3,
                     }}
-                    className="absolute left-0 top-0 h-full w-full object-cover rounded-lg z-0 brightness-50"
+                    className="absolute left-0 top-0 h-full w-full object-cover rounded-lg z-0 brightness-[.3]"
                     src={card.img}
                     alt=""
                   />

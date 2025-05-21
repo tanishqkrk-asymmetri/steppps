@@ -5,6 +5,11 @@
 * {
   /* cursor: none; */
 }
+
+html {
+  scroll-padding-top: 100px;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
