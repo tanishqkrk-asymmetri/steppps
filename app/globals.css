@@ -166,3 +166,15 @@ html {
 .card:hover .icon {
   background-color: white !important;
 }
+
+.iphone div:nth-child(1) {
+  border-color: black !important;
+}
+
+.iphone div:nth-child(n + 2) {
+  background-color: black !important;
+  border-radius: 6px;
+}
+.parallax-card-shine {
+  background: none !important;
+}

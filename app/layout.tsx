@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { Pointer } from "@/components/magicui/pointer";
 import LS from "@/components/Locomotive";
+import Footer from "@/components/Footer";
 
 const geistSans = Jost({
   subsets: ["latin"],
@@ -57,6 +58,7 @@ export default function RootLayout({
         </Pointer> */}
           <Header></Header>
           {children}
+          <Footer></Footer>
         </main>
       </body>
     </html>

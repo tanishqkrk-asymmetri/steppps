@@ -1,6 +1,13 @@
 "use client";
 
 import DualCardSection from "@/components/DualContent";
+import {
+  AndroidMockup,
+  AndroidTabMockup,
+  IPhoneMockup,
+  IPadMockup,
+} from "react-device-mockup";
+
 // @ts-expect-error ungabuga
 import Card from "react-animated-3d-card";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
@@ -22,6 +29,7 @@ import {
 } from "lucide-react";
 import { Pointer } from "@/components/magicui/pointer";
 import QRCornerIcon from "@/components/QrCodeDisplay";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -88,43 +96,102 @@ export default function Home() {
           <DualCardSection></DualCardSection>
         </div>
       </section>
-      <section className=" px-4 sm:px-8 md:px-16 py-8 md:py-16 bg-gradient-to-b to-blue-900 from-theme-blue rounded-lg text-white flex flex-col md:flex-row items-center gap-8">
-        <div className="w-full md:w-1/2">
-          <div id="about">
-            <motion.h2
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl sm:text-6xl md:text-8xl text-white"
-            >
-              About Us
-            </motion.h2>
+      <section
+        id="about"
+        className="px-4 sm:px-8 md:px-16 py-8 md:py-16 bg-gradient-to-b to-blue-900 from-theme-blue rounded-lg text-white"
+      >
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          {/* About Us Content */}
+          <div className="w-full md:w-1/2 flex flex-col">
+            <div className="w-full">
+              <motion.h2
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-4xl sm:text-6xl md:text-8xl text-white"
+              >
+                About Us
+              </motion.h2>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="space-y-4 md:space-y-6 mt-4 md:mt-6"
+              >
+                <p className="text-base md:text-lg leading-relaxed">
+                  We are passionate about transforming lives through holistic
+                  wellness and personalized fitness journeys. Our mission is to
+                  make health and fitness accessible to everyone, regardless of
+                  where they are in their wellness journey.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed">
+                  ​Steppps is an app that allows you to build on the habit of
+                  'Walking' and create health outcomes for you!
+                </p>
+              </motion.div>
+
+              {/* Mission and Vision Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 md:mt-12">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
+                >
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4 text-white">
+                    Our Mission
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-100">
+                    At Steppps, our mission is to make fitness accessible and
+                    enjoyable for everyone. We believe that small, consistent
+                    steps can lead to significant health improvements. Our app
+                    is designed to motivate and empower users to incorporate
+                    more physical activity into their daily lives, promoting a
+                    healthier and happier lifestyle.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                  className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
+                >
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4 text-white">
+                    Our Vision
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-100">
+                    Our vision at Steppps is to inspire and empower individuals
+                    of all fitness levels to embrace a healthier lifestyle
+                    through simple, enjoyable, and sustainable habits. We aim to
+                    create a global community where every step counts towards
+                    better health, fitness, and happiness. By leveraging
+                    innovative technology and fostering a supportive
+                    environment, we strive to make fitness accessible, engaging,
+                    and rewarding for everyone, one step at a time.
+                  </p>
+                </motion.div>
+              </div>
+            </div>
           </div>
-          <div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-4 md:space-y-6 mt-4 md:mt-6"
+
+          {/* Phone Preview - Existing Code */}
+          <div className="relative w-full md:w-1/2 flex justify-center items-center">
+            <Card
+              style={{
+                background: "#00000000",
+                boxShadow: "none",
+              }}
             >
-              <p className="text-base md:text-lg leading-relaxed">
-                We are passionate about transforming lives through holistic
-                wellness and personalized fitness journeys. Our mission is to
-                make health and fitness accessible to everyone, regardless of
-                where they are in their wellness journey.
-              </p>
-              <p className="text-base md:text-lg leading-relaxed">
-                ​Steppps is an app that allows you to build on the habit of
-                'Walking' and create health outcomes for you!
-              </p>
-            </motion.div>
+              <IPhoneMockup
+                className="iphone"
+                screenType="notch"
+                screenWidth={300}
+              >
+                <Image src="/preview/1.png" fill alt=""></Image>
+              </IPhoneMockup>
+            </Card>
           </div>
-        </div>
-        <div className="relative w-full md:w-1/2 flex justify-center items-center">
-          <Iphone15Pro
-            src="/preview/1.png"
-            className="size-8/12 md:size-5/12"
-          ></Iphone15Pro>
         </div>
       </section>
       <section className="my-16">
@@ -348,10 +415,21 @@ function GroupChallenges() {
     <div className="flex flex-col lg:flex-row px-4 sm:px-8 md:px-16">
       {/* iPhone Preview */}
       <div className="w-full lg:w-1/3 flex justify-center items-center mb-8 lg:mb-0">
-        <Iphone15Pro
-          src="/preview/6.png"
-          className="size-8/12 md:size-6/12 lg:size-10/12"
-        />
+        <Card
+          style={{
+            background: "#00000000",
+            boxShadow: "none",
+          }}
+        >
+          <IPhoneMockup
+            className="iphone"
+            statusbarColor="black"
+            screenType="notch"
+            screenWidth={250}
+          >
+            <Image src="/preview/7.png" fill alt=""></Image>
+          </IPhoneMockup>
+        </Card>
       </div>
 
       {/* Content Section */}
@@ -463,7 +541,7 @@ function BlogSection() {
       // ref={ref}
     >
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-5xl text-white">From the blogs</h2>
+        <h2 className="text-3xl md:text-5xl text-white">Our Blogs</h2>
         <p className="text-gray-100 mt-2">
           Tips, stories, and insights to keep you moving
         </p>
@@ -594,9 +672,8 @@ function Testimonials() {
     <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto text-center mb-8 sm:mb-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-          Our{" "}
           <span className="text-theme-green bg-theme-green/20 px-2 py-1 rounded-md inline-block sm:inline">
-            Trusted Clients
+            What our community has to say
           </span>
         </h2>
         <p className="text-gray-500 mt-3 sm:mt-4 max-w-xl mx-auto text-sm sm:text-base">

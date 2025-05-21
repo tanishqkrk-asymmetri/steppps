@@ -101,7 +101,7 @@ export default function ExpandingCards() {
             {cards.map((card) => (
               <motion.div
                 key={card.id}
-                className={`${card.color} rounded-xl shadow-lg flex-1 cursor-pointer flex flex-col items-center justify-center relative text-white p-6`}
+                className={`bg-theme-green rounded-xl shadow-lg flex-1 cursor-pointer flex flex-col items-center justify-center relative text-white p-6`}
                 onClick={() => setSelectedCard(card.id)}
                 layoutId={`card-${card.id}`}
                 initial={{ opacity: 0.9, scale: 0.98 }}
@@ -165,14 +165,15 @@ export default function ExpandingCards() {
             key={selectedCard}
             layoutId={`card-${selectedCard}`}
             className={`
-                ${cards.find((c) => c.id === selectedCard)?.color} 
+                //${cards.find((c) => c.id === selectedCard)?.color} 
+                border-2 border-zinc-200 bg-zinc-100 
             rounded-xl shadow-xl w-full flex flex-col cursor-pointer`}
             transition={cardTransition}
           >
             <div className="flex flex-col sm:flex-row justify-between items-center p-6 border-b border-white/20">
               <motion.h2
                 layoutId={`title-${selectedCard}`}
-                className="text-2xl sm:text-3xl  text-white text-center sm:text-left mb-4 sm:mb-0 max-w-full break-words"
+                className="text-2xl sm:text-3xl  text-black text-center sm:text-left mb-4 sm:mb-0 max-w-full break-words"
               >
                 {cards.find((c) => c.id === selectedCard)?.title}
               </motion.h2>
@@ -206,7 +207,7 @@ export default function ExpandingCards() {
                 variants={contentFadeVariants}
                 initial="hidden"
                 animate="visible"
-                className="text-white text-lg flex flex-col md:flex-row gap-6"
+                className="text-black text-lg flex flex-col md:flex-row gap-6"
               >
                 <section className="w-full md:w-1/2 my-4 md:my-8">
                   <h2 className="text-xl font-bold mb-2">

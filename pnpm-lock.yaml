@@ -38,6 +38,9 @@ importers:
       react-animated-3d-card:
         specifier: ^1.0.2
         version: 1.0.2(react@19.1.0)
+      react-device-mockup:
+        specifier: ^1.0.0
+        version: 1.0.0(react@19.1.0)
       react-dom:
         specifier: ^19.0.0
         version: 19.1.0(react@19.1.0)
@@ -1622,6 +1625,11 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16.0.0
+
+  react-device-mockup@1.0.0:
+    resolution: {integrity: sha512-rtLHqMdzs7FsnvYO7yCLbqvJYw8BmHEk6XsMHDQe4sBRU/SXPB3nofpjjXT3Me+MR2ZE3qsa1bVtASLRZwQO9g==}
+    peerDependencies:
+      react: '*'
 
   react-dom@19.1.0:
     resolution: {integrity: sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==}
@@ -3523,6 +3531,10 @@ snapshots:
   queue-microtask@1.2.3: {}
 
   react-animated-3d-card@1.0.2(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+
+  react-device-mockup@1.0.0(react@19.1.0):
     dependencies:
       react: 19.1.0
 
