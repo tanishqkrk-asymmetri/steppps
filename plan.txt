@@ -1,0 +1,6 @@
+Colors:
+    blue: #0079cc,
+    green: #2f9e84,
+    yellow: #fff143,
+    white: #FFFFFF,
+    black: #000000
