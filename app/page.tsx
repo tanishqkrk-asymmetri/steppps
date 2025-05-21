@@ -88,7 +88,7 @@ export default function Home() {
           <DualCardSection></DualCardSection>
         </div>
       </section>
-      <section className="container px-4 sm:px-8 md:px-16 py-8 md:py-16 bg-gradient-to-b to-blue-900 from-theme-blue rounded-lg text-white flex flex-col md:flex-row items-center gap-8">
+      <section className=" px-4 sm:px-8 md:px-16 py-8 md:py-16 bg-gradient-to-b to-blue-900 from-theme-blue rounded-lg text-white flex flex-col md:flex-row items-center gap-8">
         <div className="w-full md:w-1/2">
           <div id="about">
             <motion.h2
