@@ -90,7 +90,7 @@ export default function Home() {
       </section>
       <section className="container px-4 sm:px-8 md:px-16 py-8 md:py-16 bg-gradient-to-b to-blue-900 from-theme-blue rounded-lg text-white flex flex-col md:flex-row items-center gap-8">
         <div className="w-full md:w-1/2">
-          <div>
+          <div id="about">
             <motion.h2
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -141,7 +141,7 @@ export default function Home() {
       <section>
         <GroupChallenges />
       </section>
-      <section>
+      <section id="blogs">
         <BlogSection />
       </section>
       <section>
@@ -224,7 +224,10 @@ function Features() {
   ];
 
   return (
-    <div className="px-4 sm:px-8 md:px-16 py-4 sm:py-6 rounded-lg my-8 sm:my-16">
+    <div
+      id="features"
+      className="px-4 sm:px-8 md:px-16 py-4 sm:py-6 rounded-lg my-8 sm:my-16"
+    >
       <div className="">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {features.map((f, i) => {
