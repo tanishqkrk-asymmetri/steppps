@@ -119,14 +119,13 @@ export default function Home() {
                 className="space-y-4 md:space-y-6 mt-4 md:mt-6"
               >
                 <p className="text-base md:text-lg leading-relaxed">
-                  We are passionate about transforming lives through holistic
-                  wellness and personalized fitness journeys. Our mission is to
-                  make health and fitness accessible to everyone, regardless of
-                  where they are in their wellness journey.
+                  Steppps is made to be a user-friendly fitness app designed to
+                  help you achieve your health goals through the power of habit.
                 </p>
                 <p className="text-base md:text-lg leading-relaxed">
-                  ​Steppps is an app that allows you to build on the habit of
-                  'Walking' and create health outcomes for you!
+                  Whether you're taking your first steps towards a healthier
+                  lifestyle or aiming to break personal records, Steppps is here
+                  to support you every step of the way.
                 </p>
               </motion.div>
 
@@ -142,12 +141,10 @@ export default function Home() {
                     Our Mission
                   </h3>
                   <p className="text-sm md:text-base text-gray-100">
-                    At Steppps, our mission is to make fitness accessible and
-                    enjoyable for everyone. We believe that small, consistent
-                    steps can lead to significant health improvements. Our app
-                    is designed to motivate and empower users to incorporate
-                    more physical activity into their daily lives, promoting a
-                    healthier and happier lifestyle.
+                    At Steppps, we’re committed to making fitness accessible and
+                    enjoyable for everyone. By encouraging small, consistent
+                    steps, our app empowers users to lead healthier, happier
+                    lives through daily movement.
                   </p>
                 </motion.div>
 
@@ -161,14 +158,10 @@ export default function Home() {
                     Our Vision
                   </h3>
                   <p className="text-sm md:text-base text-gray-100">
-                    Our vision at Steppps is to inspire and empower individuals
-                    of all fitness levels to embrace a healthier lifestyle
-                    through simple, enjoyable, and sustainable habits. We aim to
-                    create a global community where every step counts towards
-                    better health, fitness, and happiness. By leveraging
-                    innovative technology and fostering a supportive
-                    environment, we strive to make fitness accessible, engaging,
-                    and rewarding for everyone, one step at a time.
+                    To inspire a world where movement is a shared journey and
+                    every step brings people closer, not just to better health,
+                    but to each other. We envision a global community united by
+                    progress, positivity, and the power of everyday action.
                   </p>
                 </motion.div>
               </div>
@@ -230,7 +223,7 @@ function Features() {
       description:
         "Monitor your daily steps and progress towards your fitness goals with ease.",
       image: "https://picsum.photos/800",
-      color: "#FF6B6B",
+      color: "#60A5FA", // Soft blue
     },
     {
       icon: () => <Dumbbell />,
@@ -238,7 +231,7 @@ function Features() {
       description:
         "Participate in exciting challenges like 'Walk Every Day in 2025' to stay motivated.",
       image: "https://picsum.photos/800",
-      color: "#4ECDC4",
+      color: "#34D399", // Fresh mint
     },
     {
       icon: () => <Goal />,
@@ -246,7 +239,7 @@ function Features() {
       description:
         "Set and achieve daily step goals to keep your fitness journey on track.",
       image: "https://picsum.photos/800",
-      color: "#FFD93D",
+      color: "#F59E0B", // Warm amber
     },
     {
       icon: () => <Users />,
@@ -254,7 +247,7 @@ function Features() {
       description:
         "Share your progress and runs with friends to inspire and compete.",
       image: "https://picsum.photos/800",
-      color: "#95E1D3",
+      color: "#8B5CF6", // Soft purple
     },
     {
       icon: () => <CircuitBoard />,
@@ -262,7 +255,7 @@ function Features() {
       description:
         "Check leaderboards for events like IPL 2025 to see where you stand.",
       image: "https://picsum.photos/800",
-      color: "#FF8B94",
+      color: "#EC4899", // Pleasant pink
     },
     {
       icon: () => <GitGraph />,
@@ -270,7 +263,7 @@ function Features() {
       description:
         "View detailed stats like calories burned, distance covered, and weekly averages.",
       image: "https://picsum.photos/800",
-      color: "#98FB98",
+      color: "#6EE7B7", // Soft teal
     },
     {
       icon: () => <User />,
@@ -278,7 +271,7 @@ function Features() {
       description:
         "Stay connected with friends through in-app chat to discuss your fitness journey.",
       image: "https://picsum.photos/800",
-      color: "#87CEFA",
+      color: "#9333EA", // Rich purple
     },
     {
       icon: () => <Route />,
@@ -286,7 +279,7 @@ function Features() {
       description:
         "Discover new trails and routes for your runs and walks in your area.",
       image: "https://picsum.photos/800",
-      color: "#DDA0DD",
+      color: "#FB923C", // Soft orange
     },
   ];
 
@@ -676,11 +669,6 @@ function Testimonials() {
             What our community has to say
           </span>
         </h2>
-        <p className="text-gray-500 mt-3 sm:mt-4 max-w-xl mx-auto text-sm sm:text-base">
-          Our mission is to drive progress and enhance the lives of our
-          customers by delivering superior products and services that exceed
-          expectations.
-        </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">

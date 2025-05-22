@@ -93,8 +93,8 @@ export default function ExpandingCards() {
   };
 
   return (
-    <div className="w-full min-h-screen p-4 flex items-center justify-center overflow-hidden">
-      <div className="w-full  h-[90vh] flex flex-col md:flex-row gap-4 relative">
+    <div className="w-full min-h-screen p-4 flex items-center justify-center ">
+      <div className="w-full  min-h-[80vh] flex flex-col md:flex-row gap-4 relative">
         {selectedCard === null ? (
           // Show both cards if none is selected
           <>
@@ -177,67 +177,66 @@ export default function ExpandingCards() {
               >
                 {cards.find((c) => c.id === selectedCard)?.title}
               </motion.h2>
-              {/* <motion.button
-                className="bg-white/20 hover:bg-white/30 rounded-full p-2 text-white flex-shrink-0"
-                onClick={() => setSelectedCard(null)}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, rotate: -90 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </motion.button> */}
             </div>
-            <div className="flex-1 p-6 overflow-y-auto">
+            <div className="flex-1 p-6 sm:p-8 overflow-y-auto bg-gradient-to-br from-gray-50 to-white">
               <motion.div
                 variants={contentFadeVariants}
                 initial="hidden"
                 animate="visible"
-                className="text-black text-lg flex flex-col md:flex-row gap-6"
+                className="text-black flex flex-col md:flex-row gap-8 md:gap-12"
               >
                 <section className="w-full md:w-1/2 my-4 md:my-8">
-                  <h2 className="text-xl font-bold mb-2">
+                  {/* Heading with Gradient */}
+                  <motion.h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-theme-green to-blue-600 text-transparent bg-clip-text">
                     {cards.find((c) => c.id === selectedCard)?.data.heading}
-                  </h2>
-                  <p className="mb-4 text-base md:text-lg">
+                  </motion.h2>
+
+                  {/* Subheading */}
+                  <p className="mb-6 text-base md:text-lg text-gray-600 font-medium">
                     {cards.find((c) => c.id === selectedCard)?.data?.subheading}
                   </p>
 
-                  <ul className="space-y-4">
+                  {/* Challenges List */}
+                  <ul className="space-y-6">
                     {cards
                       .find((c) => c.id === selectedCard)
                       ?.data?.challenges.map((challenge, index) => (
-                        <li key={index}>
-                          <h3 className="font-semibold text-base md:text-lg">
+                        <motion.li
+                          key={index}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: index * 0.2 }}
+                          className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+                        >
+                          <h3 className="text-lg md:text-xl font-semibold mb-2 text-gray-800">
                             {challenge.title}
                           </h3>
-                          <p className="text-sm md:text-base">
+                          <p className="text-gray-600 leading-relaxed">
                             {challenge.description}
                           </p>
-                        </li>
+                        </motion.li>
                       ))}
                   </ul>
                 </section>
-                <div className="w-full md:w-1/2">
-                  <motion.img
-                    className="w-full h-[200px] md:h-4/5 object-cover rounded-lg"
-                    src={cards.find((c) => c.id === selectedCard)?.img}
-                    alt=""
-                  />
+
+                {/* Image Section */}
+                <div className="w-full md:w-1/2 flex items-center">
+                  <motion.div
+                    className="relative w-full h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <motion.img
+                      className="w-full h-full object-cover"
+                      src={cards.find((c) => c.id === selectedCard)?.img}
+                      alt=""
+                      initial={{ scale: 1.1 }}
+                      animate={{ scale: 1 }}
+                      transition={{ duration: 0.5 }}
+                    />
+                    {/* Overlay gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                  </motion.div>
                 </div>
               </motion.div>
             </div>
